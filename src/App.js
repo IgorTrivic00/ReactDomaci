@@ -3,6 +3,7 @@ import PocetnaStrana from './komponente/PocetnaStrana';
 import NovaPrijava from './komponente/NovaPrijava';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { useState } from 'react';
+import Navigacija from './komponente/Navigacija';
 
 function App() {
 
@@ -82,7 +83,7 @@ function App() {
         e.target.reset();
     }
 
-    /*function pretraga(e){
+    function pretraga(e){
 
         let nove=[];
         prijave.forEach((p)=>{
@@ -92,11 +93,11 @@ function App() {
         })
         setPrijavePrikaz(prijave);
 
-    }*/
+    }
 
     return (
         <BrowserRouter>
-            
+            <Navigacija zavrseni={zavrseni} ukupno={ukupno} pretraga={pretraga}/>
             <Routes>
                 <Route path="/" element={<PocetnaStrana prijave={prijavePrikaz} zavrsi={zavrsi} obrisi={obrisi}/>}/>
                 <Route path="/novaPrijava" element={<NovaPrijava dodajPrijavu={dodajPrijavu}/>}/>
