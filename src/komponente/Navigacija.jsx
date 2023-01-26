@@ -1,7 +1,8 @@
 import React from 'react'
 import {FcBusinessman} from "react-icons/fc";
+import {GrUserAdd} from "react-icons/gr";
 import {Link} from "react-router-dom";
-import StatstikaPrikaz from './StatstikaPrikaz';
+import Statistika from './Statistika';
 
 function Navigacija({zavrseni,ukupno,pretraga}) {
     return (
@@ -18,12 +19,13 @@ function Navigacija({zavrseni,ukupno,pretraga}) {
                 <div className="collapse navbar-collapse show" id="navbarBasic">
                     <ul className="navbar-nav me-auto mb-2 mb-xl-0">
                         <li className="nav-item">
-                            <Link to="/novaB">
-                                <button className="btn btn-outline-danger" type="button">Nova prijava</button>
+                            <Link to="/novaPrijava">
+                                <GrUserAdd size={25}/>
+                                <button className="btn btn-outline-danger" type="button" >Nova prijava</button>
                             </Link>
                         </li>
                     </ul>
-                    <StatstikaPrikaz className="container" zavrseni={zavrseni} ukupno={ukupno}/>
+                    <Statistika className="container" zavrseni={zavrseni} ukupno={ukupno}/>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Pretraga" aria-label="Pretraga" onInput={pretraga} />
                     </form>

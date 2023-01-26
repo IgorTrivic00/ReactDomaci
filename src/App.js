@@ -87,11 +87,11 @@ function App() {
 
         let nove=[];
         prijave.forEach((p)=>{
-            if(p.naslov.toLowerCase().indexOf(e.target.value.toLowerCase())>-1){
+            if(p.ime.toLowerCase().indexOf(e.target.value.toLowerCase())>-1){
                 nove.push(p)
             }
         })
-        setPrijavePrikaz(prijave);
+        setPrijavePrikaz(nove);
 
     }
 
