@@ -1,5 +1,7 @@
 import React from 'react'
+import AdministratorPrikaz from './KompanijaInfo';
 import JednaPrijava from './JednaPrijava';
+import KompanijaInfo from './KompanijaInfo';
 
 function PocetnaStrana({prijave,zavrsi, obrisi}) {
     return (
@@ -10,6 +12,9 @@ function PocetnaStrana({prijave,zavrsi, obrisi}) {
                     <JednaPrijava prijava={prijava} key={prijava.id} zavrsi={zavrsi} obrisi={obrisi}/>
                 ))}
 
+            </div> 
+            <div className='kompanija-info'>
+                <KompanijaInfo/>
             </div>
         </div>
     );

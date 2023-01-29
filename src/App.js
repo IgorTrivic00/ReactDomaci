@@ -10,19 +10,29 @@ function App() {
     const [prijave, setPrijave] = useState([
       {
           "id": 1,
-          "ime": "igor Trivic",
+          "ime": "Igor Trivic",
           "pozicija": "Junior Developer",
           "status": "u razmatranju"
       }, {
           "id": 2,
           "ime": "Jovana Bajic",
           "pozicija": "Project Manger",
-          "status": "u razmatranju"
+          "status": "primljen/a"
       }, {
           "id": 3,
           "ime": "Kristijan Pajic",
           "pozicija": "Junior Developer",
-          "status": "odbijen"
+          "status": "u razmatranju"
+      },  {
+          "id": 4,
+          "ime": "Lana Ivanovic",
+          "pozicija": "HR Manager",
+          "status": "u razmatranju"
+      },  {
+          "id": 5,
+          "ime": "Luka Novakovic",
+          "pozicija": "Social Media Manger",
+          "status": "u razmatranju"
       },
     ]);
     const [prijavePrikaz,setPrijavePrikaz]=useState(prijave);
@@ -33,7 +43,7 @@ function App() {
     function vratiZavrsene() {
         let br = 0;
         prijave.forEach((p) => {
-            if (p.status === "zavrsen")
+            if (p.status === "primljen/a")
                 br++;
         });
         return br;
@@ -42,7 +52,7 @@ function App() {
     function zavrsi(id) {
         prijave.forEach((p) => {
             if (p.id === id) {
-                p.status = "zavrsen";
+                p.status = "primljen/a";
             }
         });
         osveziPocetnu()
@@ -77,7 +87,7 @@ function App() {
             'id': generisiId(),
             'ime': e.target[0].value,
             'pozicija': e.target[1].value,
-            'status': 'cekanje',
+            'status': 'u razmatranju',
         })
         osveziPocetnu();
         e.target.reset();

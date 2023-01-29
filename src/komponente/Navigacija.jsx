@@ -1,6 +1,6 @@
 import React from 'react'
 import {FcBusinessman} from "react-icons/fc";
-import {GrUserAdd} from "react-icons/gr";
+import {GrUserAdd, GrUserManager} from "react-icons/gr";
 import {Link} from "react-router-dom";
 import Statistika from './Statistika';
 

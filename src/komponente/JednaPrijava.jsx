@@ -15,7 +15,7 @@ function JednaPrijava({prijava,zavrsi,obrisi}) {
             </div>
         </div>
     </div>
-);
+  );
 }
 
 export default JednaPrijava
